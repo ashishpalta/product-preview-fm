@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+
+font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+     }
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    
+}
+body{
+    background-color: var(--Cream);
+}
+
+.card{
+    background-color: hsl(0, 0%, 100%);
+    max-width: 100%;
+    max-height: 100%;
+    margin: 1.25rem;
+    border-radius: 23px;
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;    
+}
+.product-description{
+    margin: 2rem;
+}
+.product-description > :first-child{
+    letter-spacing: 0.5rem;
+    color:hsl(236,13%,42%);
+}
+.product-description h1{
+    font-size: 2rem;
+    color:black;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+}
+.product-description > :nth-child(3){
+    color: hsl(236,13%,42%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.product-description > :nth-child(4){
+    color:hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+    font-family: 'Fraunces', serif;
+}
+.product-description > :nth-child(4) del{
+    color: hsl(236,13%,42%);
+    font-size: 1rem;
+    position: relative;
+    bottom:5px;
+    left: 10px;
+}
+.product-description button{
+    margin:1rem auto;
+    background-color: hsl(158, 36%, 37%);
+    font-size: 1rem;
+    font-weight: bold;
+    color:hsl(0, 0%, 100%); ;
+    padding:1rem;
+    width: 100%;  
+    border-radius: 10px;  
+}
+@media(min-width:600px){
+    
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        max-width:50vw;
+        margin: 25vh auto;
+       
+    }
+    .card div:first-child img{
+        width: 100%;
+        height:433px;
+        display: inherit;
+    }    
+    .product-description > :nth-child(4){
+        font-size: 1.75rem;
+        margin:1.5rem 0;
+    }    
+}
